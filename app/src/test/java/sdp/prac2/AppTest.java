@@ -5,8 +5,35 @@ package sdp.prac2;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import java.util.*;
 
 class AppTest {
+    @Test void Task3() {
+        App classBeingTested = new App();
+        // Test 1 //
+        // Arrange
+        List<String> dataMatching = Arrays.asList("()", "(())", "a(a)a", "", "(((((((()))))))", "(", ")", "aaa");
+        List<Boolean> expectedMatching = Arrays.asList(true, true, true, true, false, false, false, true);
+        // Act
+        List<Boolean> resultMatching = new ArrayList<>();
+        for (String s : dataMatching) {
+            resultMatching.add(classBeingTested.Task3(s));
+        }
+        // Assert
+        assertIterableEquals(expectedMatching, resultMatching);
+
+        // Test 2 //
+        // Arrange
+        List<String> dataNesting = Arrays.asList("()()()", ")(()", "((()))", ")(", "())(");
+        List<Boolean> expectedNesting = Arrays.asList(true, false, true, false, false);
+        // Act
+        List<Boolean> resultNesting = new ArrayList<Boolean>;
+        for (String s : dataNesting) {
+            resultNesting.add(classBeingTested.Task3(s));
+        }
+        // Assert
+        assertIterableEquals(expectedNesting, resultNesting);
+    }
     @ Test void Task4() {
         //ARRANGE
         App task4BeingTested = new App();
