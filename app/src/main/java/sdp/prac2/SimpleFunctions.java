@@ -15,6 +15,17 @@ public class SimpleFunctions {
 
     } //Task1
 
+        
+    public static List<String> Task2 (List<String> a){
+        List<String> output = new ArrayList<String>();
+        for(int i=0; i < a.size(); i++){
+            String element = a.get(i);
+            if(element.length()>1){
+                output.add(element.Substring(1));
+            }
+        }
+    }
+
     public static List<Integer> Task4(List<Integer> a, List<Integer> b) {
     if (a.size() != b.size()) {
         return null;
@@ -25,22 +36,10 @@ public class SimpleFunctions {
         result.add(a.get(i) * b.get(size - i - 1));
     }
     return result;
-    
-}
-        public static List<String> Task2 (List<String> a){
-        List<String> output = new ArrayList<String>();
-        for(int i=0; i < a.size(); i++){
-            String element = a.get(i);
-            if(element.length()>1){
-                output.add(element.Substring(1));
-            }
-        }
-    }
 
-    public SimpleFunctions() {}
 }
 
-public List<Integer> Task6(List<Integer>a, List<Integer> b){
+    public List<Integer> Task6(List<Integer>a, List<Integer> b){
     int index = -1;
     for (int 1 = 0; i < a.size();i++){
         index = a.get(i);
@@ -52,3 +51,7 @@ public List<Integer> Task6(List<Integer>a, List<Integer> b){
     }
     return b;
 }
+
+    public SimpleFunctions() {}
+}
+
