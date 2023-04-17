@@ -7,4 +7,67 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
+    @ Test void Task4() {
+        //ARRANGE
+        App task4BeingTested = new App();
+        //Test1
+        int[] testlist1_a = {2, 3, 4};
+        int[] testlist1_b = {5, 6, 7};
+        int[] expected1 = {14, 18, 20};
+        //Test2
+        int[] testlist2_a = {2, 3, 4};
+        int[] testlist2_b = {5, 6};
+        //expected2 = NULL
+        //Test3
+        int[] testlist3_a = {};
+        int[] testlist3_b = {5, 6, 7};
+        //expected3_a = NULL
+        //expected3_b = NULL
+        //expected3_c = NULL
+        //Test4
+        int[] testlist4_a = {-2, 3, 4};
+        int[] testlist4_b = {5, 6, 7};
+        int[] expected4 = {-14, 18, 20};
+        //Test5
+        int[] testlist5_a = {2, 3, 4};
+        int[] testlist5_b = {5, 0, 7};
+        int[] expected5 = {14, 0, 20};
+        //Test6
+        int[] testlist6_a = {2};
+        int[] testlist6_b = {3};
+        int[] expected6 = {6};
+
+        //ACT
+        //Test1
+        int[] result1 = task4BeingTested.Task4(testlist1_a, testlist1_b);
+        //Test2
+        int[] result2 = task4BeingTested.Task4(testlist2_a, testlist2_b);
+        //Test3
+        int[] result3_a = task4BeingTested.Task4(testlist3_a, testlist3_b);
+        int[] result3_b = task4BeingTested.Task4(testlist3_b, testlist3_a);
+        int[] result3_c = task4BeingTested.Task4(testlist3_a, testlist3_a);
+        //Test4
+        int[] result4 = task4BeingTested.Task4(testlist4_a, testlist4_b);
+        //Test5
+        int[] result5 = task4BeingTested.Task4(testlist5_a, testlist5_b);
+        //Test6
+        int[] result6 = task4BeingTested.Task4(testlist6_a, testlist6_b);
+
+
+        //ASSERT
+        //Test1
+        assertArrayEquals(expected1, result1)
+        //Test2
+        assertArrayEquals(NULL, result2);
+        //Test3
+        assertArrayEquals(NULL, result3_a);
+        assertArrayEquals(NULL, result3_b);
+        assertArrayEquals(NULL, result3_c);
+        //Test4
+        assertArrayEquals(expected4, result4);
+        //Test5
+        assertArrayEquals(expected5, result5);
+        //Test6
+        assertArrayEquals(expected6, result6);
+    }
 }
