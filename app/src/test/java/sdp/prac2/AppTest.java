@@ -7,4 +7,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
+    @Test
+    public void testTask5WithSortedArray() {
+        List<Integer> sortedList = Arrays.asList(1, 2, 3, 4, 5);
+        boolean isSorted = SimpleFunctions.Task5(sortedList);
+        assertTrue(isSorted);
+    }
+
+    @Test
+    public void testTask5WithUnsortedArray() {
+        List<Integer> unsortedList = Arrays.asList(3, 1, 4, 2, 5);
+        boolean isSorted = SimpleFunctions.Task5(unsortedList);
+        assertFalse(isSorted);
+    }
+
+
 }
