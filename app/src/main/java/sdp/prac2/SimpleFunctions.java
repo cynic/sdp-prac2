@@ -17,4 +17,18 @@ public class SimpleFunctions {
         }
         return result;
     }
+
+    public static List<Integer> Task6(List<Integer> numbers) {
+        List<Integer> result = new ArrayList<>();
+        for (int num : numbers) {
+            if (num % 100 == 0) {
+                result.add(num);
+            } else {
+                int rounded = ((num / 100) + 1) * 100;
+                result.add(rounded);
+            }
+        }
+        return result;
+    }
+   
 }
