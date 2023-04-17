@@ -7,4 +7,42 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
+    @Test
+    public void testTask5WithSortedArray() {
+        List<Integer> sortedList = Arrays.asList(1, 2, 3, 4, 5);
+        boolean isSorted = SimpleFunctions.Task5(sortedList);
+        assertTrue(isSorted);
+    }
+
+    @Test
+    public void testTask5WithUnsortedArray() {
+        List<Integer> unsortedList = Arrays.asList(3, 1, 4, 2, 5);
+        boolean isSorted = SimpleFunctions.Task5(unsortedList);
+        assertFalse(isSorted);
+    }
+
+    @Test
+    public void testTask4() {
+
+        SimpleFunctions testing = new SimpleFunctions();
+        List<Integer> a = Arrays.asList(1, 2, 3);
+        List<Integer> b = Arrays.asList(2, 4, 6);
+        List<Integer> expected = Arrays.asList(2, 8, 18);
+
+        List<Integer> result = testing.Task4(expected);
+
+        assertIterableEquals(expected, result);
+    }
+    @Test 
+    public void testTask4() {
+
+        SimpleFunctions testing = new SimpleFunctions();
+        List<Integer> a = Arrays.asList(1, 2, 3);
+        List<Integer> b = Arrays.asList(2, 4, 6, 8);
+        List<Integer> expected = Arrays.asList(null);
+
+        List<Integer> result = testing.Task4(expected);
+
+        assertIterableEquals(expected, result);
+    }
 }
