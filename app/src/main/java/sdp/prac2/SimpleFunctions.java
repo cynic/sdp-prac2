@@ -15,4 +15,23 @@ public class SimpleFunctions {
         }
         return sum;
     }
+
+    //task 5, returning true if the list is sorted (method for sorting integers)
+    public static boolean task5(List<Integer> list) {
+        if (list == null || list.isEmpty()) {
+            return true; // An empty list or null list is considered sorted
+        }
+
+        int prev = list.get(0); // Get the first element as the initial previous value
+
+        for (int i = 1; i < list.size(); i++) {
+            int current = list.get(i);
+            if (current < prev) {
+                return false; // If any element is less than the previous element, the list is not sorted
+            }
+            prev = current;
+        }
+
+        return true; // If no elements are out of order, the list is sorted
+    }
 }
