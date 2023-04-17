@@ -78,4 +78,16 @@ class AppTest {
 
         assertIterableEquals(expected, result);
     }
+
+    @Test
+    public void testTask6(){
+        SimpleFunctions testing = new SimpleFunctions();
+        List<Integer> input = List.of(25 , 50 , 100, 175, 200);
+        List<Integer> expected = List.of(100, 100, 100, 200, 200);
+
+        List<Integer> result = testing.Task6(input);
+
+        assertIterableEquals(expected, result);
+
+    }
 }
