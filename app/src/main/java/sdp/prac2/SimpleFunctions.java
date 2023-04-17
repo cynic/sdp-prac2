@@ -14,6 +14,20 @@ public class SimpleFunctions {
     }
     return result;
 }
-
+    public static boolean task3(String s) {
+        int count = 0; 
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (c == '(') {
+                count++;    //increment counter for an opening parentheses
+            } else if (c == ')') {
+                count--;    // decrement counter for a matching closing parentheses 
+                if (count < 0) {
+                    return false;   // extra closing parentheses
+                }
+            }
+        }
+        return count == 0;
+    }
     public SimpleFunctions() {}
 }
