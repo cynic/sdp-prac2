@@ -21,5 +21,28 @@ class AppTest {
         assertFalse(isSorted);
     }
 
+    @Test
+    public void testTask4() {
 
+        SimpleFunctions testing = new SimpleFunctions();
+        List<Integer> a = Arrays.asList(1, 2, 3);
+        List<Integer> b = Arrays.asList(2, 4, 6);
+        List<Integer> expected = Arrays.asList(2, 8, 18);
+
+        List<Integer> result = testing.Task4(expected);
+
+        assertIterableEquals(expected, result);
+    }
+    @Test 
+    public void testTask4() {
+
+        SimpleFunctions testing = new SimpleFunctions();
+        List<Integer> a = Arrays.asList(1, 2, 3);
+        List<Integer> b = Arrays.asList(2, 4, 6, 8);
+        List<Integer> expected = Arrays.asList(null);
+
+        List<Integer> result = testing.Task4(expected);
+
+        assertIterableEquals(expected, result);
+    }
 }
