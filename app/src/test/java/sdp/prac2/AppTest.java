@@ -7,4 +7,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
+    public void testTask1(){
+        //Arrange: give the inputs
+        List<Integer> list1 = Arrays.asList(1,2,3,4,5);
+        List<Integer> list2 = Arrays.asList(2,4,6,8,10);
+
+        //Act: take in the input to the function used for testing
+        int result1 = SimpleFunctions.task1(list1, list2)
+        int result2 = SimpleFunctions.task1(list2, list1)
+
+        //Assert: compare the results with the expected
+        assertEquals(28, result1);
+        assertEquals(8, result2);
+    }
 }
