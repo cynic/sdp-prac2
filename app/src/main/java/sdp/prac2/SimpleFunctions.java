@@ -3,13 +3,6 @@ package sdp.prac2;
 import java.util.List;
 
 
-interface CompareFunc<T> {
-    // -1 if first element is less than second element
-    // 1 if first element is greater than second
-    // 0 if they are eqaul
-    int compare(T x, T y);
-}
-
 
 public class SimpleFunctions {
     public SimpleFunctions() {}
