@@ -25,7 +25,17 @@ public class SimpleFunctions {
         result.add(a.get(i) * b.get(size - i - 1));
     }
     return result;
+    
 }
+        public static List<String> Task2 (List<String> a){
+        List<String> output = new ArrayList<String>();
+        for(int i=0; i < a.size(); i++){
+            String element = a.get(i);
+            if(element.length()>1){
+                output.add(element.Substring(1));
+            }
+        }
+    }
 
     public SimpleFunctions() {}
 }
