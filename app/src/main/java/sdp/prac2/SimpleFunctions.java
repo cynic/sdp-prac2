@@ -29,3 +29,16 @@ public class SimpleFunctions {
 
     public SimpleFunctions() {}
 }
+
+public List<Integer> Task6(List<Integer>a, List<Integer> b){
+    int index = -1;
+    for (int 1 = 0; i < a.size();i++){
+        index = a.get(i);
+        if (index % 100 == 0){
+            b.add(index);
+        }else{
+            b.add(index % 100 + index);
+        }
+    }
+    return b;
+}
