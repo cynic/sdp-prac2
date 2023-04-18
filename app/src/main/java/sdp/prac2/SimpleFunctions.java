@@ -51,6 +51,22 @@ public class SimpleFunctions {
         return count == 0;
     }
 
+    public List<Integer> task4(List<Integer> list_1, List<Integer>list_2){
+        List<Integer> results = new ArrayList<>();
+        if(list_1.size() != list_2.size()){
+            return null;
+        }
+        else{
+
+            for(int i = 0; i < list_1.size(); i++){
+                int addIt = list_1.get(i) * list_2.get((list_1.size()-1) - i);
+                results.add(addIt);
+            }
+
+            return results;
+        }
+    }
+
     public static <T extends Comparable<T>> boolean task5(List<T> list) {
     for (int i = 1; i < list.size(); i++) {
         if (list.get(i - 1).compareTo(list.get(i)) > 0) {
