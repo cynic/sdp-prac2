@@ -4,7 +4,7 @@ import java.util.*;
 
 public class SimpleFunctions {
 
-    public static List<Integer> Task1(List<Integer> a, List<Integer> b) {
+    public static int Task1(List<Integer> a, List<Integer> b) {
         int sum;
         for(int i=0; i<b.size(); i++) {      // Loop through each index i in b
             if(b.get(i) >=0 && b.get(i)<a.size()) {
