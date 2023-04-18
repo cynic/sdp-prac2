@@ -24,7 +24,9 @@ public class SimpleFunctions {
         for(int i=0; i < a.size(); i++){
             String element = a.get(i);
             if(element.length()>1){
+                String v = element.substring(1);
                 output.add(element.substring(1));
+                System.out.println(v);
             }
         }
         return output;
@@ -43,14 +45,15 @@ public class SimpleFunctions {
 
 }
 
-    public List<Integer> Task6(List<Integer>a, List<Integer> b){
+    public List<Integer> Task6(List<Integer>a){
     int index = -1;
+    List<Integer> b = new ArrayList<Integer>();
     for (int i = 0; i < a.size();i++){
         index = a.get(i);
         if (index % 100 == 0){
             b.add(index);
         }else{
-            b.add(index % 100 + index);
+            b.add(index + (100 - (index % 100)));
         }
     }
     return b;
