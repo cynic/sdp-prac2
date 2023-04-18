@@ -51,6 +51,24 @@ class AppTest {
         assertEquals(expected, result);
     }//TASK 2 tests
 
+     @Test
+    public void testTask3() {
+        SimpleFunctions beingTested = new SimpleFunctions();
+        //first test
+        List<String> input_1 = Arrays.asList("((((()))))", "(())(())", "(()))))((", "(())(())()", "))()");
+        List<String> expected_1 = Arrays.asList("true","true","false","true","false");
+        //Act
+        List<String> result_1 = beingTested.Task3(input_1);
+        //Assert
+        Assert.assertEquals(expected_1, result_1);
+
+        //second test
+        List<String> input_2 = Arrays.asList("", "(())", "(())))))", "((((((()))))))","))");
+        List<String> expected_2 = Arrays.asList("false","true","false","true","false");
+        //Act
+        List<String> result_2 = beingTested.Task3(input_2);
+        //Assert
+        Assert.assertEquals(expected_2, result_2);
 
     @Test
     public void testTask5WithSortedArray() {
