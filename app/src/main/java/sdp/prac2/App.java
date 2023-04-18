@@ -3,9 +3,12 @@
  */
 package sdp.prac2;
 import sdp.prac2.SimpleFunctions;
+import java.util.List;
+import java.util.Arrays;
 
 public class App {
     public static void main(String[] args) {
-        SimpleFunctions funcs = new SimpleFunctions();
+        //SimpleFunctions funcs = new SimpleFunctions();
+        System.out.println("Hello");
     }
 }
