@@ -11,8 +11,7 @@ import java.util.*;
 class AppTest {
     //tests for task1
     
-    @Test 
-    public void task1Test(){
+    @Test void task1Test(){
         //Arrange 
         SimpleFunctions testTested = new SimpleFunctions();
         List<Integer> a = Arrays.asList(1,2,3,4);
@@ -30,11 +29,11 @@ class AppTest {
         assertEquals(expected2, result2);
     }
 
-    //TASK 2 tests
+
     @Test
     public void testTask2() {
         SimpleFunctions testing = new SimpleFunctions();
-        List<String> input = Arrays.asList("hello", "world",  "testing", "123", "ab");
+        List<String> input = Arrays.asList("hello", "world", "testing", "123", "ab");
         List<String> expected = Arrays.asList("ello", "orld", "esting", "23", "b");
 
         List<String> result = testing.Task2(input);

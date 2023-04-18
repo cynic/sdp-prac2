@@ -6,6 +6,7 @@ import java.util.*;
 
 public class SimpleFunctions {
 
+
     
     public static int Task1(List<Integer> a, List<Integer> b) {
         int sum = 0 ;
@@ -24,9 +25,7 @@ public class SimpleFunctions {
         for(int i=0; i < a.size(); i++){
             String element = a.get(i);
             if(element.length()>1){
-                String v = element.substring(1);
                 output.add(element.substring(1));
-                System.out.println(v);
             }
         }
         return output;
