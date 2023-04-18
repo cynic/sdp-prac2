@@ -3,35 +3,27 @@ package sdp.prac2;
 import java.util.*;
 
 public class SimpleFunctions {
-    public SimpleFunctions() {}
-
-    public int Task1(List<Integer> a, List<Integer> b) {
+    public int task1(List<Integer> a, List<Integer> b) {
         int sum = 0;
-        for ( int i = 0; i < b.size(); i++ ) {
-            if (b.get(i) < a.size() - 1 && b.get(i) >= 0) {
-                sum += a.get( (b.get(i)) );
-            }
-            else {
-                continue; 
+        for (int i = 0; i < b.size(); i++) {
+            if (b.get(i) < a.size() && b.get(i) >= 0) {
+                sum += a.get(b.get(i));
             }
         }
         return sum;
     }
 
-    public List<String> Task2(List<String> s) {
-        List<String> result = new ArrayList<String>();
+    public List<String> task2(List<String> s) {
+        List<String> result = new ArrayList<>();
         for (String a : s) {
-            if (a.length() > 0) {
-                result.add(a.substring(1, a.length()));
-            }
-            else {
-                continue;
+            if (!a.isEmpty()) {
+                result.add(a.substring(1));
             }
         }
         return result;
     }
 
-    public static List<Integer> Task6(List<Integer> numbers) {
+    public static List<Integer> task6(List<Integer> numbers) {
         List<Integer> result = new ArrayList<>();
         for (int num : numbers) {
             if (num % 100 == 0) {
@@ -43,21 +35,28 @@ public class SimpleFunctions {
         }
         return result;
     }
-   
 
-    public boolean Task3(String str) {
+    public boolean task3(String str) {
         int count = 0;
-        for (int i = 0; str.length(); i++) {
+        for (int i = 0; i < str.length(); i++) {
             if (str.charAt(i) == '(') {
                 count++;
             } else if (str.charAt(i) == ')') {
                 count--;
                 if (count < 0) {
-                    return false
+                    return false;
                 }
             }
         }
         return count == 0;
     }
 
+    public static <T extends Comparable<T>> boolean task5(List<T> list) {
+    for (int i = 1; i < list.size(); i++) {
+        if (list.get(i - 1).compareTo(list.get(i)) > 0) {
+            return false;
+        }
+    }
+    return true;
+}
 }

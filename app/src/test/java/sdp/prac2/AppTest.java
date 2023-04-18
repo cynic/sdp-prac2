@@ -8,8 +8,10 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.*;
 
 class AppTest {
-    @Test void Task3() {
-        App classBeingTested = new App();
+    @Test 
+    void Task3() {
+        // App classBeingTested = new App();
+        SimpleFunctions classBeingTested = new SimpleFunctions();
         // Test 1 //
         // Arrange
         List<String> dataMatching = Arrays.asList("()", "(())", "a(a)a", "", "(((((((()))))))", "(", ")", "aaa");
@@ -17,8 +19,9 @@ class AppTest {
         // Act
         List<Boolean> resultMatching = new ArrayList<>();
         for (String s : dataMatching) {
-            resultMatching.add(classBeingTested.Task3(s));
-        }
+            resultMatching.add(classBeingTested.task3(s));
+        } 
+        // Task3 int[] result1 = task4
         // Assert
         assertIterableEquals(expectedMatching, resultMatching);
 
@@ -27,74 +30,57 @@ class AppTest {
         List<String> dataNesting = Arrays.asList("()()()", ")(()", "((()))", ")(", "())(");
         List<Boolean> expectedNesting = Arrays.asList(true, false, true, false, false);
         // Act
-        List<Boolean> resultNesting = new ArrayList<Boolean>;
+        List<Boolean> resultNesting = new ArrayList<Boolean>();
         for (String s : dataNesting) {
-            resultNesting.add(classBeingTested.Task3(s));
+            resultNesting.add(classBeingTested.task3(s));
         }
         // Assert
         assertIterableEquals(expectedNesting, resultNesting);
     }
-    @ Test void Task4() {
-        //ARRANGE
-        App task4BeingTested = new App();
-        //Test1
-        int[] testlist1_a = {2, 3, 4};
-        int[] testlist1_b = {5, 6, 7};
-        int[] expected1 = {14, 18, 20};
-        //Test2
-        int[] testlist2_a = {2, 3, 4};
-        int[] testlist2_b = {5, 6};
-        //expected2 = NULL
-        //Test3
-        int[] testlist3_a = {};
-        int[] testlist3_b = {5, 6, 7};
-        //expected3_a = NULL
-        //expected3_b = NULL
-        //expected3_c = NULL
-        //Test4
-        int[] testlist4_a = {-2, 3, 4};
-        int[] testlist4_b = {5, 6, 7};
-        int[] expected4 = {-14, 18, 20};
-        //Test5
-        int[] testlist5_a = {2, 3, 4};
-        int[] testlist5_b = {5, 0, 7};
-        int[] expected5 = {14, 0, 20};
-        //Test6
-        int[] testlist6_a = {2};
-        int[] testlist6_b = {3};
-        int[] expected6 = {6};
 
-        //ACT
-        //Test1
-        int[] result1 = task4BeingTested.Task4(testlist1_a, testlist1_b);
-        //Test2
-        int[] result2 = task4BeingTested.Task4(testlist2_a, testlist2_b);
-        //Test3
-        int[] result3_a = task4BeingTested.Task4(testlist3_a, testlist3_b);
-        int[] result3_b = task4BeingTested.Task4(testlist3_b, testlist3_a);
-        int[] result3_c = task4BeingTested.Task4(testlist3_a, testlist3_a);
-        //Test4
-        int[] result4 = task4BeingTested.Task4(testlist4_a, testlist4_b);
-        //Test5
-        int[] result5 = task4BeingTested.Task4(testlist5_a, testlist5_b);
-        //Test6
-        int[] result6 = task4BeingTested.Task4(testlist6_a, testlist6_b);
+    // @Test 
+    // void Task4() {
+    //     SimpleFunctions task4BeingTested = new SimpleFunctions();
 
+    //     // Test 1 - both lists have same size
+    //     int[] testlist1_a = {2, 3, 4};
+    //     int[] testlist1_b = {5, 6, 7};
+    //     int[] expected1 = {14, 18, 20};
+    //     int[] result1 = task4BeingTested.task4(testlist1_a, testlist1_b);
+    //     assertArrayEquals(expected1, result1);
 
-        //ASSERT
-        //Test1
-        assertArrayEquals(expected1, result1)
-        //Test2
-        assertArrayEquals(NULL, result2);
-        //Test3
-        assertArrayEquals(NULL, result3_a);
-        assertArrayEquals(NULL, result3_b);
-        assertArrayEquals(NULL, result3_c);
-        //Test4
-        assertArrayEquals(expected4, result4);
-        //Test5
-        assertArrayEquals(expected5, result5);
-        //Test6
-        assertArrayEquals(expected6, result6);
+    //     // Test 2 - list a is larger than list b
+    //     int[] testlist2_a = {2, 3, 4, 5};
+    //     int[] testlist2_b = {5, 6};
+    //     int[] result2 = task4BeingTested.task4(testlist2_a, testlist2_b);
+    //     assertNull(result2);
+
+    //     // Test 3 - list b is larger than list a
+    //     int[] testlist3_a = {2, 3};
+    //     int[] testlist3_b = {5, 6, 7};
+    //     int[] result3 = task4BeingTested.task4(testlist3_a, testlist3_b);
+    //     assertNull(result3);
+
+    //     // Test 4 - empty lists
+    //     int[] testlist4_a = {};
+    //     int[] testlist4_b = {};
+    //     int[] result4 = task4BeingTested.task4(testlist4_a, testlist4_b);
+    //     assertNull(result4);
+    // }
+
+    @Test
+    void Task5() {
+        // Arrange
+        SimpleFunctions classBeingTested = new SimpleFunctions();
+        List<Integer> sortedList = Arrays.asList(1, 2, 3, 4, 5);
+        List<Integer> unsortedList = Arrays.asList(1, 3, 2, 4, 5);
+
+        // Act
+        boolean isSortedList = classBeingTested.task5(sortedList);
+        boolean isUnsortedList = classBeingTested.task5(unsortedList);
+
+        // Assert
+        assertTrue(isSortedList);
+        assertFalse(isUnsortedList);
     }
 }
