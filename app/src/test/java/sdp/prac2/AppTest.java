@@ -82,12 +82,22 @@ class AppTest {
     @Test
     public void testTask6(){
         SimpleFunctions testing = new SimpleFunctions();
-        List<Integer> input = List.of(25 , 50 , 100, 175, 200);
-        List<Integer> expected = List.of(100, 100, 100, 200, 200);
+        List<Integer> input1 = List.of(25 , 50 , 100, 175, 200);
+        List<Integer> expected1 = List.of(100, 100, 100, 200, 200);
 
-        List<Integer> result = testing.Task6(input);
+        List<Integer> input2 = List.of(125 , 150 , 175, 200);
+        List<Integer> expected2 = List.of(200, 200, 200, 200);
 
-        assertIterableEquals(expected, result);
+        List<Integer> input3 = new ArrayList<Integer>();
+        List<Integer> expected3 = new ArrayList<Integer>();
 
+
+        List<Integer> result1 = testing.Task6(input1);
+        List<Integer> result2 = testing.Task6(input2);
+        List<Integer> result3 = testing.Task6(input3);
+
+        assertIterableEquals(expected1, result1);
+        assertIterableEquals(expected2, result2);
+        assertIterableEquals(expected2, result3);
     }
 }
