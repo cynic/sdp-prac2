@@ -6,6 +6,7 @@ import sdp.prac2.SimpleFunctions;
 
 public class App {
     public static void main(String[] args) {
-        SimpleFunctions funcs = new SimpleFunctions();
+        //SimpleFunctions funcs = new SimpleFunctions();
+        System.out.println("Hello");
     }
 }
