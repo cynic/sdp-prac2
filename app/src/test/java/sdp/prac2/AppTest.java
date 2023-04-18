@@ -11,7 +11,8 @@ import java.util.*;
 class AppTest {
     //tests for task1
     
-    @Test void task1Test(){
+    @Test 
+    public void task1Test(){
         //Arrange 
         SimpleFunctions testTested = new SimpleFunctions();
         List<Integer> a = Arrays.asList(1,2,3,4);
@@ -25,8 +26,8 @@ class AppTest {
         int result2 = testTested.Task1(c,d);
         
         //Assert
-        assert.assertEquals(expected1, result1);
-        assert.assertEquals(expected2, result2);
+        assertEquals(expected1, result1);
+        assertEquals(expected2, result2);
     }
 
     //TASK 2 tests
@@ -61,7 +62,7 @@ class AppTest {
         //Act
         List<String> result_1 = beingTested.Task3(input_1);
         //Assert
-        Assert.assertEquals(expected_1, result_1);
+        assertEquals(expected_1, result_1);
 
         //second test
         List<String> input_2 = Arrays.asList("", "(())", "(())))))", "((((((()))))))","))");
@@ -69,7 +70,7 @@ class AppTest {
         //Act
         List<String> result_2 = beingTested.Task3(input_2);
         //Assert
-        Assert.assertEquals(expected_2, result_2);
+        assertEquals(expected_2, result_2);
     }
 
     @Test
