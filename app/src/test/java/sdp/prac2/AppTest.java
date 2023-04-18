@@ -5,9 +5,16 @@ package sdp.prac2;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import java.util.*;
+
 
 class AppTest {
+<<<<<<< HEAD
     tests for task1
+=======
+    //tests for task1
+    
+>>>>>>> 6698ba84451ca201d78a2c5dd0190d90cb0c281f
     @Test void task1Test(){
         //Arrange 
         SimpleFunctions testTested = new SimpleFunctions();
@@ -19,16 +26,18 @@ class AppTest {
         int expected1 = 11; // isnt this meant to be 10? (1 + 2 + 3 + 4)
         int expected2 = 5;
         //Act
-        int result1 = testTested.task1(a,b);
-        int result2 = testTested.task1(c,d);
+        int result1 = testTested.Task1(a,b);
+        int result2 = testTested.Task1(c,d);
+        
         //Assert
-        Assert.assertEquals(expected1,result1);
-        Assert.assertEquals(expected2,result2);
+        assert.assertEquals(expected1, result1);
+        assert.assertEquals(expected2, result2);
     }
 
     TASK 2 tests
     @Test
     public void testTask2() {
+<<<<<<< HEAD
 
         SimpleFunctions Tests = new SimpleFunctions();
 
@@ -36,20 +45,47 @@ class AppTest {
         List<String> expected = Arrays.asList("ello", "orld", "", "esting", "23", "b");
 
         List<String> result = Tests.Task2(input);
+=======
+        SimpleFunctions testing = new SimpleFunctions();
+        List<String> input = Arrays.asList("hello", "world", "a", "", "testing", "123", "ab");
+        List<String> expected = Arrays.asList("ello", "orld", "", "esting", "23", "b");
+
+        List<String> result = testing.Task2(input);
+>>>>>>> 6698ba84451ca201d78a2c5dd0190d90cb0c281f
 
         assertEquals(expected, result);
     }//TASK 2 tests
 
     @Test
     public void testTask2EmptyList() {
+        SimpleFunctions testing = new SimpleFunctions();
         List<String> input = Collections.emptyList();
         List<String> expected = Collections.emptyList();
 
-        List<String> result = Task2(input);
+        List<String> result = testing.Task2(input);
 
         assertEquals(expected, result);
     }//TASK 2 tests
 
+     @Test
+    public void testTask3() {
+        SimpleFunctions beingTested = new SimpleFunctions();
+        //first test
+        List<String> input_1 = Arrays.asList("((((()))))", "(())(())", "(()))))((", "(())(())()", "))()");
+        List<String> expected_1 = Arrays.asList("true","true","false","true","false");
+        //Act
+        List<String> result_1 = beingTested.Task3(input_1);
+        //Assert
+        Assert.assertEquals(expected_1, result_1);
+
+        //second test
+        List<String> input_2 = Arrays.asList("", "(())", "(())))))", "((((((()))))))","))");
+        List<String> expected_2 = Arrays.asList("false","true","false","true","false");
+        //Act
+        List<String> result_2 = beingTested.Task3(input_2);
+        //Assert
+        Assert.assertEquals(expected_2, result_2);
+    }
 
     @Test
     public void testTask5WithSortedArray() {
@@ -65,5 +101,38 @@ class AppTest {
         assertFalse(isSorted);
     }
 
+    @Test
+    public void testTask4() {
 
+        SimpleFunctions testing = new SimpleFunctions();
+        List<Integer> a = Arrays.asList(1, 2, 3);
+        List<Integer> b = Arrays.asList(2, 4, 6);
+        List<Integer> expected = Arrays.asList(2, 8, 18);
+
+        List<Integer> result = testing.Task4(a, b);
+
+        assertIterableEquals(expected, result);
+    }
+
+    @Test
+    public void testTask6(){
+        SimpleFunctions testing = new SimpleFunctions();
+        List<Integer> input1 = List.of(25 , 50 , 100, 175, 200);
+        List<Integer> expected1 = List.of(100, 100, 100, 200, 200);
+
+        List<Integer> input2 = List.of(125 , 150 , 175, 200);
+        List<Integer> expected2 = List.of(200, 200, 200, 200);
+
+        List<Integer> input3 = new ArrayList<Integer>();
+        List<Integer> expected3 = new ArrayList<Integer>();
+
+
+        List<Integer> result1 = testing.Task6(input1);
+        List<Integer> result2 = testing.Task6(input2);
+        List<Integer> result3 = testing.Task6(input3);
+
+        assertIterableEquals(expected1, result1);
+        assertIterableEquals(expected2, result2);
+        assertIterableEquals(expected2, result3);
+    }
 }
