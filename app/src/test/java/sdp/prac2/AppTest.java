@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.*;
 
+
 class AppTest {
     //tests for task1
     
@@ -24,8 +25,8 @@ class AppTest {
         int result2 = testTested.Task1(c,d);
         
         //Assert
-        //assert.assertEquals(expected1, result1);
-        //assert.assertEquals(expected2, result2);
+        assert.assertEquals(expected1, result1);
+        assert.assertEquals(expected2, result2);
     }
 
     //TASK 2 tests
@@ -69,6 +70,7 @@ class AppTest {
         List<String> result_2 = beingTested.Task3(input_2);
         //Assert
         Assert.assertEquals(expected_2, result_2);
+    }
 
     @Test
     public void testTask5WithSortedArray() {
